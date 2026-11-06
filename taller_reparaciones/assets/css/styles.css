@@ -1,0 +1,537 @@
+/* ==========================================================
+   ESTILO TIPOGRÁFICO INTERNACIONAL (ESTILO SUIZO / SWISS STYLE)
+   TechService - Sistema de Seguimiento de Reparaciones
+   ========================================================== */
+
+:root {
+    --swiss-black: #09090b;
+    --swiss-dark: #18181b;
+    --swiss-gray-900: #18181b;
+    --swiss-gray-700: #3f3f46;
+    --swiss-gray-500: #71717a;
+    --swiss-gray-300: #d4d4d8;
+    --swiss-gray-200: #e4e4e7;
+    --swiss-gray-100: #f4f4f5;
+    --swiss-gray-50: #fafafa;
+    --swiss-white: #ffffff;
+    
+    /* Acento Suizo Tradicional */
+    --swiss-red: #dc2626;
+    --swiss-red-hover: #b91c1c;
+
+    /* Acentos funcionales de estado */
+    --status-recibido: #2563eb;
+    --status-diagnostico: #d97706;
+    --status-reparacion: #4f46e5;
+    --status-cerrado: #15803d;
+
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Tipografía Base */
+body {
+    background-color: var(--swiss-gray-50);
+    color: var(--swiss-dark);
+    font-family: var(--font-main);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Modificadores Tipográficos Suizos */
+.letter-spacing-tight {
+    letter-spacing: -0.035em;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.08em;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.15em;
+}
+
+.swiss-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--swiss-red);
+    margin-bottom: 0.5rem;
+}
+
+.form-label-swiss {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--swiss-gray-700);
+}
+
+/* Navbar Minimalista Suizo */
+.navbar-custom {
+    background-color: var(--swiss-black);
+    border-bottom: 2px solid var(--swiss-red);
+    padding: 0.85rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    font-size: 1.25rem;
+    color: var(--swiss-white) !important;
+}
+
+.navbar-brand .swiss-cross {
+    color: var(--swiss-red);
+    font-weight: 900;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #a1a1aa !important;
+    transition: color 0.15s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--swiss-white) !important;
+}
+
+/* Hero Suizo */
+.swiss-hero {
+    background: var(--swiss-white);
+    border: 1px solid var(--swiss-gray-200);
+    padding: 3.5rem 3rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.swiss-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: var(--swiss-red);
+}
+
+.swiss-search-form {
+    background: var(--swiss-white);
+    transition: box-shadow 0.2s ease;
+}
+
+.swiss-search-form:focus-within {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+}
+
+.swiss-search-input {
+    font-family: var(--font-main);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--swiss-black);
+}
+
+.swiss-search-input::placeholder {
+    color: #a1a1aa;
+    font-size: 0.88rem;
+    letter-spacing: 0.05em;
+}
+
+/* Tarjetas Suizas (Swiss Cards) */
+.card-swiss, .card-custom {
+    background: var(--swiss-white);
+    border: 1px solid var(--swiss-gray-200);
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color 0.15s ease;
+}
+
+.card-swiss-header, .card-header {
+    background: var(--swiss-white);
+    border-bottom: 1px solid var(--swiss-gray-200);
+    border-radius: 0 !important;
+    padding: 1.25rem 1.5rem;
+}
+
+/* Métricas Suizas */
+.stat-card {
+    background: var(--swiss-white);
+    border: 1px solid var(--swiss-gray-200);
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--swiss-black);
+}
+
+.stat-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    font-size: 1.25rem;
+}
+
+/* Stepper / Línea de Progreso Suiza */
+.tracking-stepper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.tracking-stepper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: var(--swiss-gray-200);
+    z-index: 1;
+}
+
+.step-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+.step-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 0;
+    background-color: var(--swiss-white);
+    border: 2px solid var(--swiss-gray-300);
+    color: var(--swiss-gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.step-item.active .step-circle {
+    background-color: var(--swiss-black);
+    border-color: var(--swiss-black);
+    color: var(--swiss-white);
+}
+
+.step-item.completed .step-circle {
+    background-color: var(--swiss-white);
+    border-color: var(--swiss-black);
+    color: var(--swiss-black);
+}
+
+.step-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--swiss-gray-500);
+}
+
+.step-item.active .step-label {
+    color: var(--swiss-black);
+}
+
+.step-item.completed .step-label {
+    color: var(--swiss-dark);
+}
+
+/* Badges Suizos (Etiquetas Geométricas) */
+.badge {
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4em 0.7em;
+}
+
+/* Tablas Suizas */
+.table-custom {
+    border-collapse: collapse;
+}
+
+.table-custom th {
+    background-color: var(--swiss-gray-100);
+    color: var(--swiss-gray-900);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--swiss-gray-200);
+    border-bottom: 2px solid var(--swiss-black);
+    padding: 0.85rem 1rem;
+}
+
+.table-custom td {
+    vertical-align: middle;
+    border-bottom: 1px solid var(--swiss-gray-200);
+    padding: 0.85rem 1rem;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Botones y Form Controles */
+.btn {
+    border-radius: 0;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: all 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--swiss-black);
+    border-color: var(--swiss-black);
+    color: var(--swiss-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--swiss-dark);
+    border-color: var(--swiss-dark);
+}
+
+.btn-danger {
+    background-color: var(--swiss-red);
+    border-color: var(--swiss-red);
+}
+
+.btn-danger:hover {
+    background-color: var(--swiss-red-hover);
+    border-color: var(--swiss-red-hover);
+}
+
+.form-control, .form-select {
+    border-radius: 0;
+    border-color: var(--swiss-gray-300);
+    color: var(--swiss-black);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--swiss-black);
+    box-shadow: 0 0 0 2px rgba(9, 9, 11, 0.15);
+}
+
+/* Comprobante Suizo Imprimible */
+.ticket-container {
+    background: var(--swiss-white);
+    border: 2px solid var(--swiss-black);
+    border-radius: 0;
+    padding: 3rem;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+@media print {
+    body {
+        background-color: #ffffff !important;
+    }
+    .no-print, .navbar-custom, footer {
+        display: none !important;
+    }
+    .ticket-container {
+        border: 2px solid #000000;
+        box-shadow: none !important;
+        padding: 1.5rem;
+    }
+}
+
+/* Zona de Recibimiento */
+.hero-welcome .display-3 {
+    line-height: 1.1;
+}
+
+.card-custom:hover {
+    border-color: var(--swiss-black) !important;
+    transition: border-color 0.2s ease;
+}
+
+/* Pestañas de Navegación Suizas */
+.swiss-tab-nav {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--swiss-black);
+}
+
+.swiss-tab-nav .nav-tabs {
+    border-bottom: none;
+    gap: 4px;
+}
+
+.swiss-tab-nav .nav-tabs .nav-link {
+    border-radius: 0;
+    border: 1px solid var(--swiss-gray-300);
+    border-bottom: none;
+    background-color: var(--swiss-gray-100);
+    color: var(--swiss-gray-700);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    padding: 0.85rem 1.75rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.swiss-tab-nav .nav-tabs .nav-link:hover {
+    background-color: var(--swiss-gray-200);
+    color: var(--swiss-black);
+    border-color: var(--swiss-gray-400);
+}
+
+.swiss-tab-nav .nav-tabs .nav-link.active {
+    background-color: var(--swiss-black);
+    color: var(--swiss-white) !important;
+    border-color: var(--swiss-black);
+}
+
+.swiss-tab-nav .nav-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--swiss-red);
+}
+
+/* Vitrina de Imagen de Laboratorio / Taller */
+.hero-tech-card {
+    background: var(--swiss-black);
+    border: 2px solid var(--swiss-black);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-tech-header {
+    background: #121214;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.65rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: #a1a1aa;
+}
+
+.hero-tech-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+.hero-tech-img {
+    width: 100%;
+    height: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+    filter: brightness(0.97) contrast(1.05);
+}
+
+.hero-tech-card:hover .hero-tech-img {
+    transform: scale(1.03);
+}
+
+.hero-tech-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(9,9,11,0.85) 50%, rgba(9,9,11,0.98) 100%);
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-tech-badge-float {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.hero-stat-pill {
+    background: var(--swiss-gray-100);
+    border: 1px solid var(--swiss-gray-300);
+    padding: 0.65rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Tabla de Admins */
+.table-custom tr.table-light {
+    background-color: #fffbeb !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .swiss-hero {
+        padding: 2rem 1.5rem;
+    }
+    .hero-tech-img-wrapper {
+        max-height: 280px;
+    }
+    .hero-tech-img {
+        max-height: 280px;
+    }
+    .swiss-tab-nav .nav-tabs .nav-link {
+        padding: 0.65rem 1rem;
+        font-size: 0.75rem;
+    }
+    .tracking-stepper::before {
+        display: none;
+    }
+    .tracking-stepper {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: flex-start;
+    }
+    .step-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+    .step-circle {
+        margin: 0;
+    }
+}
